@@ -1,21 +1,26 @@
 # bias_correction
 R code for climate model bias correction, following Hempel et al. 2013
 
+There are two main steps to this bias correction process.
+
 The following steps are done for temperature, and precipitation:
 1. Calculate bias correction factors based on the observational data and historical model output in the reference period.
-a.	Temperature correction factors: Tparam_calc.R
-i.	C, monthly mean correction
-ii.	B, transfer function slope 
 
-b.	Precipitation correction factors: Pparam_calc.R
-i.	C, monthly mean correction
-ii.	A, transfer function intercept
-iii.	B, transfer function slope
-iv.	Epsilon_m, monthly mean threshold for “wet” definition
-v.	Epsolon_d, daily threshold for “wet” definition
+Tparam_calc.R: calculate semperature correction factors: 
+- C, monthly mean correction
+- B, transfer function slope 
 
-B.	Apply the correction factors to the application period and the historical period:
-Apply_T_Param.R
-Apply_P_Param.R
+Pparam_calc.R: calculate precipitation correction factors: 
+- C, monthly mean correction
+-	A, transfer function intercept
+-	B, transfer function slope
+-	Epsilon_m, monthly mean threshold for “wet” definition
+-	Epsolon_d, daily threshold for “wet” definition
+
+2.	Apply the correction factors to the application period and the historical period:
+
+Apply_T_Param.R: apply the temperature correction factors
+
+Apply_P_Param.R: apply the precipitation correction factors
 
 
