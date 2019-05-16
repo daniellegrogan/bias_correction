@@ -15,7 +15,7 @@ Pparam_calc.R: calculate precipitation correction factors:
 -	A, transfer function intercept
 -	B, transfer function slope
 -	Epsilon_m, monthly mean threshold for “wet” definition
--	Epsolon_d, daily threshold for “wet” definition
+-	Epsilon_d, daily threshold for “wet” definition
 
 2.	Apply the correction factors to the application period and the historical period:
 
